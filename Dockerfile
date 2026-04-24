@@ -34,6 +34,6 @@ RUN . /opt/ros/jazzy/setup.sh && colcon build --symlink-install
 
 # Setup environment sourcing and DDS config
 RUN echo "source /opt/ros/jazzy/setup.bash" >> /root/.bashrc && \
-    echo "source /root/ros2_ws/install/setup.bash" >> /root/.bashrc && \
+    echo "source /root/ros2_ws/install/setup.bash" >> /root/.bashrc
 
 CMD ["bash"]
