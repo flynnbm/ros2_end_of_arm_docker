@@ -13,6 +13,26 @@ Pre-built image will be hosted on Docker Hub:
 docker pull flynnbm/ros2-jazzy-<TBD>
 ```
 
+If you get the following error:
+```bash
+permission denied while trying to connect to the docker API at unix:///var/run/docker.sock
+```
+
+Create a new group called docker if one does not already exist:
+```bash
+sudo groupadd docker
+```
+
+And add your user to the group"
+```bash
+sudo usermod -aG docker $USER
+```
+
+Either log out and log back in or use the following command to add changes to your current session
+```bash 
+newgrp docker
+```
+
 Will Contain:
 
 - ROS 2 Jazzy (Ubuntu 24.04)
