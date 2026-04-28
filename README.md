@@ -93,6 +93,12 @@ ros2 launch realsense2_camera rs_pointcloud_launch.py
 - Container is configured to source `/root/ros2_ws/install/setup.bash` automatically
 - 'ros2-jazzy-<TBD>>` image will be prebuilt, so users don’t need to rebuild anything
 
+### Networking Note
+
+For this setup, do not use `network_mode: host` by default. On the tested desktop configuration, ROS 2 topics from the container were visible to RViz and ROS 2 CLI tools on the host when using Docker’s default networking, but topic discovery did not work as expected when `network_mode: host` was enabled.
+
+If ROS 2 topic discovery fails, first try commenting out `network_mode: host` and restarting the container.
+
 ## Reset Docker Environment (optional)
 
 To fully reset Docker:
