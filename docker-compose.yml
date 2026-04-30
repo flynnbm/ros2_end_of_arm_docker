@@ -3,7 +3,7 @@ version: '3.8'
 services:
   ros2_end_of_arm:
     image: flynnbm/ros2-end-of-arm:latest
-    container_name: ros2_end_of_arm_dev
+    container_name: ros2-end-of-arm
     # Do NOT use this if default Docker networking already exposes ROS 2 topics correctly
     # network_mode: host
     privileged: true
