@@ -10,7 +10,7 @@ TODO:
 Pre-built image will be hosted on Docker Hub:
 
 ```bash
-docker pull flynnbm/ros2-jazzy-<TBD>
+docker pull flynnbm/ros2-end-of-arm:latest
 ```
 
 If you get the following error:
